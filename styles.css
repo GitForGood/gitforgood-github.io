@@ -1,43 +1,124 @@
 :root {
     --heading-font: 'Outfit', Arial, sans-serif;
-    --body-font: 'Roboto', 'Courier New', monospace;
+    --body-font: 'Roboto Mono', Courier;
     --primary-color: #2F2E20;
     --secondary-color: #545034;
     --background-color: #EBE6C6;
     --text-color: white;
+    --h1-font-size: x-large;
+    --h2-font-size: large;
+    --h3-font-size: medium;
+    --padding-content-horizontal: 8em;
+    --margin-content-horizontal: 8em;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
 }
+h1 {
+    font-size: var(--h1-font-size);
+}
+h2 {
+    font-size: var(--h2-font-size);
+}
+h3 {
+    font-size: var(--h3-font-size);
+}
 
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+main{
+    margin: 0 var(--margin-content-horizontal);
+}
 body {
+    background: var(--background-color);
     font-family: var(--body-font);
-    margin: 0;
-    padding: 0;
+    font-size: medium;
     text-align: center;
+    margin: 0;
 }
 header {
-    background: #2F2E20;
+    background: var(--primary-color);
     color: white;
-    padding: 1em;
+    position: sticky;
+    margin: 0;
+    z-index: 1000;
 }
+.skip-link {
+    position: absolute;
+    top: -40px; /* Hides it above the screen */
+    left: 10px;
+    background-color: #5200DB;
+    color: var(--text-color);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #333;
+    transition: top 0.3s ease-in-out;
+}
+
+.skip-link:focus {
+    top: 80px; /* Moves it into view when focused */
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
 nav ul {
+    display: flex;
+    align-items: center;
     list-style: none;
     padding: 0;
+    margin: 1rem var(--margin-content-horizontal);
+    width: 100%;
+    justify-content: space-between;
 }
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
+
 nav ul li a {
-    color: white;
+    font-family: var(--heading-font);
+    font-size: var(--h1-font-size);
+    position: relative;
+    color: var(--text-color);
     text-decoration: none;
+    margin: 2rem 2rem;
 }
-button {
-    margin-top: 10px;
-    padding: 5px 10px;
+
+/* Create the underline effect */
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem; /* Adjusts spacing under text */
+    width: 0%; /* Starts with no width */
+    height: 0.125rem; /* Thickness of the underline */
+    background-color: white;
+    transition: width 0.2s ease-in-out; /* Smooth animation */
 }
+
+/* On hover, expand the underline */
+nav ul li a:hover::after {
+    width: 100%; /* Full width on hover */
+}
+
 section {
-    padding: 20px;
+    padding-bottom: 400px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding:0 var(--padding-content-horizontal);
+    text-align: center;
+}
+
+.spacer{
+    flex-grow: 1;
+    flex-shrink: 0;
 }
