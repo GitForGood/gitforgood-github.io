@@ -3,72 +3,48 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="menu.js" defer></script>
 </head>
 <body>
     <a href="#maincontent" class="skip-link">Skip to main content</a>
     <header>
         <nav>
-            <ul class="split_bar">
-                <li><a href="#home" class="animated_link">Home</a></li>
+            <ul>
+                <li><a href="#home" class="animated-link">Home</a></li>
                 <li class="spacer" aria-hidden="true"></li>
-                <li><a href="#about" class="animated_link">About</a></li>
+                <li><a href="#about" class="animated-link">About</a></li>
                 <li class="has-submenu">
-                    <a href="#projects" aria-expanded="false">Projects</a>
+                    <a href="#projects" aria-expanded="false" class="animated-link">Projects</a>
                     <ul>
-                        <li><a href="#proj-1">Project #1</a></li>
-                        <li><a href="#proj-2">Project #2</a></li>
+                        <li><a href="#projects" class="animated-link">sub-project</a></li>
+                        <li class="has-submenu">
+                            <a href="#projects" aria-expanded="false" class="animated-link">sub-project</a>
+                            <ul>
+                                <li><a href="#projects" class="animated-link">sub-sub-project</a></li>
+                                <li><a href="#projects" class="animated-link">sub-sub-project</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#projects" class="animated-link">sub-project</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact" class="animated_link">Contact</a></li>
+                <li><a href="#contact" class="animated-link">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main id="maincontent">
-        <section id="hero" class="content_container">
-            <div id="flex_hero" class="divided_flex">
-                <div class="flex_column">
-                    <h1>Looking for an Interaction Designer?</h1>
-                    <p>Do you need...</p>
-                    <ul class="point_list">
-                        <li>Help translating your goals and aspirations into a medium that speaks to people on a visceral level?</li>
-                        <li>To make your vision accessible to all?</li>
-                        <li>A designer who understands the technical limitations of their designs and are able to provide deliverable artifacts?</li>
-                        <li>A certified Figma enginner?</li>
-                    </ul>
-                    <p>Then you're in the right place. Here's what you can do next:</p>
-                    <div class="flex_row_shrink">
-                        <a href="#contact" class="button_fab">Contact me</a>
-                    </div>
-                </div>
-                <div class="hero_card">
-                    <img src="https://media.licdn.com/dms/image/v2/C4E03AQHH9n9RQUpffA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1554017844064?e=1748476800&v=beta&t=8yHExkfDB4GlGBLUe9J-tuhLyeACUguSRBB5cWxsJWI" alt="portrait of Oliver Andersson" width="420" height="420">
-                    <p>Novice Interaction Designer, Oliver Andersson</p>
-                </div>
-            </div>
-        </section>
-        <section id="about" class="content_container" style="background-color:#cfcbae">
+        <section id="about">
             <h2>About Me</h2>
             <p>Welcome to my portfolio! I am a web developer passionate about creating awesome projects.</p>
         </section>
-        <section id="projects" class="content_container">
+        <section id="projects">
             <h2>Projects</h2>
             <p>Here are some of my recent projects.</p>
-            <div>
-                <header>
-                    <h3 id="proj-1">Project #1</h3>
-                </header>
-            </div>
-            <div>
-                <header>
-                    <h3 id="proj-2">Project #2</h3>
-                </header>
-            </div>
             <!--
             <div class="project-showcase">
                 <h3 id="project-name">name of project</h3>
@@ -76,16 +52,16 @@
             </div>
             -->
         </section>
-    </main>
-    <footer>
         <h2 id="contact">Contact</h2>
         <address>
-            <p>Email me at: <a href="mailto:oliversofta@gmail.com" class="regular_link">oliversofta@gmail.com</a></p>
+            <p>Written by <a href="mailto:webmaster@example.com">John Doe</a>.</p>
             <p>Visit us at:</p>
             <p>Example.com</p>
             <p>Box 564, Disneyland</p>
             <p>USA</p>
-        </address>
+            </address>
+    </main>
+    <footer>
         <section>
             <H2>Spacing</H2>
             <p>
