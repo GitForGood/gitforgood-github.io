@@ -65,6 +65,7 @@ header {
 }
 nav {
     display: flex;
+    overflow-y: visible;
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-color);
@@ -79,32 +80,7 @@ nav ul {
     margin: 1rem var(--margin-content-horizontal);
     width: 100%;
     justify-content: space-between;
-}
-
-nav ul li a {
-    font-family: var(--heading-font);
-    font-size: var(--h1-font-size);
-    position: relative;
-    color: var(--text-color);
-    text-decoration: none;
-    margin: 2rem 2rem;
-}
-
-/* Create the underline effect */
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -0.5rem; /* Adjusts spacing under text */
-    width: 0%; /* Starts with no width */
-    height: 0.125rem; /* Thickness of the underline */
-    background-color: white;
-    transition: width 0.2s ease-in-out; /* Smooth animation */
-}
-
-/* On hover, expand the underline */
-nav ul li a:hover::after {
-    width: 100%; /* Full width on hover */
+    overflow-y: visible;
 }
 
 section {
@@ -121,4 +97,79 @@ footer {
 .spacer{
     flex-grow: 1;
     flex-shrink: 0;
+}
+
+.has-submenu{
+    background-color: var(--primary-color);
+    text-align: left;
+    color: var(--text-color);
+    a[aria-expanded="true"] + button + ul{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        flex-direction: column;
+        flex: 1 0 400px;
+    }
+    ul{display: none;}
+}
+
+
+.animated-link{
+    font-family: var(--heading-font);
+    font-size: var(--h1-font-size);
+    position: relative;
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 0.5em;
+    
+}
+nav li{
+    padding-right: 1em;
+}
+.animated-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.25em; /* Adjusts spacing under text */
+    width: 0%; /* Starts with no width */
+    height: 0.125rem; /* Thickness of the underline */
+    background-color: white;
+    transition: width 0.2s ease-in-out; /* Smooth animation */
+}
+.animated-link:hover::after{
+    width: 100%; /* Full width on hover */
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+.foldupbutton{
+    background: none;
+	color: var(--text-color);
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.foldupbutton[aria-expanded="true"] div.chevron { rotate: 180deg; }
+.foldupbutton[aria-expanded="false"] div.chevron { rotate: 0deg; }
+
+.chevron {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 13.1l-8-8 2.1-2.2 5.9 5.9 5.9-5.9 2.1 2.2z'/%3E%3C/svg%3E");
+    height: 16px;
+    width: 16px;
+    color: var(--text-color);
+    align-self: center;
 }
