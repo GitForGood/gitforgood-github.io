@@ -17,30 +17,23 @@
         <nav>
             <ul>
                 <li><a href="#home" class="animated-link">Home</a></li>
-                <li class="spacer" aria-hidden="true"></li>
-                <li><a href="#about" class="animated-link">About</a></li>
-                <li class="has-submenu">
-                    <a href="#projects" aria-expanded="false" class="animated-link">Projects</a>
-                    <ul>
-                        <li><a href="#projects" class="animated-link">sub-project</a></li>
-                        <li class="has-submenu">
-                            <a href="#projects" aria-expanded="false" class="animated-link">sub-project</a>
-                            <ul>
-                                <li><a href="#projects" class="animated-link">sub-sub-project</a></li>
-                                <li><a href="#projects" class="animated-link">sub-sub-project</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#projects" class="animated-link">sub-project</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact" class="animated-link">Contact</a></li>
+                <div id="right-links">
+                    <li><a href="#about" class="animated-link">About</a></li>
+                    <li><a href="#projects" class="animated-link">Projects</a></li>
+                    <li><a href="#contact" class="animated-link">Contact</a></li>
+                </div>
             </ul>
         </nav>
     </header>
+    <button id="theme-toggle">Toggle darkmode</button>
     <main id="maincontent">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my portfolio! I am a web developer passionate about creating awesome projects.</p>
+        <section id="about" >
+            <div class="hero-card">
+                <h2>About Me</h2>
+                <p>Welcome to my portfolio! I am a web developer passionate about creating awesome projects.</p>
+                <img src="assets/profile.jfif" alt="Picture of Oliver Andersson">
+            </div>
+
         </section>
         <section id="projects">
             <h2>Projects</h2>
