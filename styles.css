@@ -7,7 +7,7 @@
     --text-dark: #e4e4e4;
     --highlight-dark: #06d656;
     --border-color: #075625;
-    --margin-width: min(16rem, 15vw);
+    --margin-width: min(12rem, 10vw);
 }
 
 a {
@@ -23,6 +23,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    zoom: 150%;
 }
 
 .hero-card{
