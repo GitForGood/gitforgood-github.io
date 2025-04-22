@@ -75,6 +75,7 @@ footer {
     margin: 0;
     border-top: 1px solid var(--border-color);
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     section {
         border-left: 1px solid var(--border-color);
