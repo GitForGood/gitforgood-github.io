@@ -76,10 +76,15 @@ footer {
     border-top: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
+    section {
+        border-left: 1px solid var(--border-color);
+    }
 }
 
 .to-the-right {
     align-content: right;
+    border-left: 0px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 .btn {
