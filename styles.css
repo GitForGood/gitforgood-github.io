@@ -74,21 +74,12 @@ footer {
     padding: 0 var(--margin-width); 
     margin: 0;
     border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
 }
 
-footer > * {
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    padding: 1rem 4rem;
-    > * {
-        margin-top: 0;
-        margin-bottom: 0;
-        > * {
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-top: 1rem;
-        }
-    }
+.to-the-right {
+    align-content: right;
 }
 
 .btn {
@@ -115,6 +106,10 @@ footer > * {
 .btn:active {
     background-color: color-mix(in srgb, var(--border-color) 90%, black 10%);
     transform:translateY(1px)
+}
+
+.project-showcase{
+    padding-bottom: var(--margin-width);
 }
 
 .caption {
