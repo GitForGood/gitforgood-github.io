@@ -67,6 +67,8 @@ body main {
 
 section {
     padding: 0 4rem;
+    padding-top: 6rem;
+    margin-top: -6rem;
 }
 
 footer {
