@@ -2,61 +2,137 @@
     --heading-font: 'Outfit', Arial, sans-serif;
     --body-font: 'Roboto Mono', Courier;
 
-    --background-light: #e4e4e4;
-    --text-light: #161616;
-    --highlight-light: #144029;
-    
-    --background-dark: #161616;
+    --background-dark: #121212;
+    --foreground-dark: #0a0a0a;
     --text-dark: #e4e4e4;
-    --highlight-dark: #45FFB8;
+    --highlight-dark: #06d656;
+    --border-color: #075625;
+    --margin-width: min(16rem, 15vw);
+}
 
+a {
+    color: var(--highlight-dark)
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: var(--highlight-light)
+    color: var(--highlight-dark)
 }
-
 body {
-    background: var(--background-light);
-    color: var(--text-light);
-}
-
-body.dark-mode{
     background: var(--background-dark);
     color: var(--text-dark);
-    h1, h2, h3, h4, h5, h6 {
-        color: var(--highlight-dark)
-    }
-    .animated-link{
-        color: var(--highlight-dark)
-    }
-    .animated-link::after{
-        background-color: var(--highlight-dark);
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .hero-card{
     display: grid;
-    
 }
 
 header {
-    padding: clamp(2rem, 10vh 4rem);
+    background-color: var(--foreground-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 var(--margin-width);
 }
-header nav ul {
-    padding: 0 2rem;
+
+header nav{
+    padding: 2rem;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
     display: flex;
     flex-direction: row;
     list-style-type: none;
     justify-content: space-between;
 }
-ul div {
+
+
+header nav div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-header nav ul li {
-    margin: 0 2rem;
+
+body main {
+    font-size: large;
+    text-align: center;
+    margin: 0 var(--margin-width);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+section {
+    padding: 0 4rem;
+}
+
+footer {
+    background-color: var(--foreground-dark);
+    padding: 0 var(--margin-width); 
+    margin: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+footer > * {
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    padding: 1rem 4rem;
+    > * {
+        margin-top: 0;
+        margin-bottom: 0;
+        > * {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 1rem;
+        }
+    }
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background-color: var(--border-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover{
+    background-color: color-mix(in srgb, var(--border-color) 90%, white 10%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.btn:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;  
+}
+.btn:active {
+    background-color: color-mix(in srgb, var(--border-color) 90%, black 10%);
+    transform:translateY(1px)
+}
+
+.caption {
+    display: block;
+}
+
+.hero-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    list-style-position: outside;
+}
+
+.hero-text {
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    h1 {
+        font-size: xx-large;
+    }
 }
 
 .skip-link {
@@ -75,11 +151,12 @@ header nav ul li {
 }
 
 .animated-link{
+    margin: 0 2rem;
     font-family: var(--heading-font);
     font-size: x-large;
     position: relative;
     text-decoration: none;
-    color: var(--highlight-light);
+    color: var(--highlight-dark);
 }
 
 .animated-link::after{
@@ -89,11 +166,14 @@ header nav ul li {
     bottom: 0; /* Adjusts spacing under text */
     width: 0%; /* Starts with no width */
     height: 0.125rem; /* Thickness of the underline */
-    background-color: var(--highlight-light);
+    background-color: var(--highlight-dark);
     transition: width 0.2s ease-in-out; /* Smooth animation */
 }
 .animated-link:hover::after{
     width: 100%; /* Full width on hover */
+}
+.animated-link:focus::after{
+    width: 100%; /* Full width on hover */  
 }
 
 .visuallyhidden {

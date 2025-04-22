@@ -15,51 +15,67 @@
     <a href="#maincontent" class="skip-link">Skip to main content</a>
     <header>
         <nav>
-            <ul>
-                <li><a href="#home" class="animated-link">Home</a></li>
-                <div id="right-links">
-                    <li><a href="#about" class="animated-link">About</a></li>
-                    <li><a href="#projects" class="animated-link">Projects</a></li>
-                    <li><a href="#contact" class="animated-link">Contact</a></li>
-                </div>
-            </ul>
+            <a href="#home" class="animated-link">Home</a>
+            <div id="right-links">
+                <a href="#about" class="animated-link">About</a>
+                <a href="#projects" class="animated-link">Projects</a>
+                <a href="#contact" class="animated-link">Contact</a>
+            </div>
         </nav>
     </header>
-    <button id="theme-toggle">Toggle darkmode</button>
     <main id="maincontent">
-        <section id="about" >
+        <section>
             <div class="hero-card">
-                <h2>About Me</h2>
-                <p>Welcome to my portfolio! I am a web developer passionate about creating awesome projects.</p>
-                <img src="assets/profile.jfif" alt="Picture of Oliver Andersson">
+                <div class="hero-text">
+                    <h1>Are you looking for an Interaction Designer?</h1>
+                    <p>Do you need help:</p>
+                    <ul>
+                        <li><p>Translating your goals and aspirations into a medium that speaks to people on a visceral level?</p></li>
+                        <li><p>Making your vision accessible to all?</p></li>
+                        <li><p>From a designer that understands the technical limitations of their designs and are able to provide deliverable designs?</p></li>
+                        <li><p>From a grade-a Figma Engineer™?</p></li>
+                    </ul>
+                    <p>Then get in touch and let me know how I can be of service.</p>
+                    <a id="contact-button", class="btn" href="#contact">Contact me</a>
+                </div>
+                <div class="portrait">
+                    <img src="assets/Hero Portrait.png" alt="Picture of Oliver Andersson">
+                    <p class="caption">Interaction Designer <br> Oliver Andersson</p>
+                </div>
             </div>
-
+        </section>
+        <section id="about">
+            <div>
+                <h2>About me</h2>
+            </div>
         </section>
         <section id="projects">
             <h2>Projects</h2>
             <p>Here are some of my recent projects.</p>
-            <!--
-            <div class="project-showcase">
-                <h3 id="project-name">name of project</h3>
-                <p>small description of what the project is and what purpose it served</p>
+            <div id="boardgame-goblins" class="project-showcase">
+                <h3>Goblin raiders</h3>
+                <p>A deckbuilding board game where the player balances being a menace to their surroundings and keeping their ragtag band of goblins in check long enough to secure a foothold in the region.</p>
             </div>
-            -->
+            <div id="boardgame-witch" class="project-showcase">
+                <h3>Witch's Cauldron</h3>
+                <p>A cooperative boardgame where the players playing as critters cooperate to escape a witch's hut before the witch manages to capture them all.</p>
+            </div>
+            <div id="Homescape" class="project-showcase">
+                <h3>Homescape</h3>
+                <p>A platform for configuring IOT devices in a smart home that is accessible to outsiders by utilizing a digital twin of the home.</p>
+                <p>It allows users to orient themselves in real space and use their knowledge of the layout of the home to configure their smart home to work for them independantly of who initially set up the devices.</p>
+            </div>
         </section>
-        <h2 id="contact">Contact</h2>
-        <address>
-            <p>Written by <a href="mailto:webmaster@example.com">John Doe</a>.</p>
-            <p>Visit us at:</p>
-            <p>Example.com</p>
-            <p>Box 564, Disneyland</p>
-            <p>USA</p>
-            </address>
     </main>
     <footer>
         <section>
-            <H2>Spacing</H2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <h2 id="contact">Contact</h2>
+            <address>
+                <p>Oliver Andersson</p>
+                <p>Email me @: <a href="mailto:oliversofta@gmail.com">oliversofta@gmail.com</a>.</p>
+                <p>Or call me: <a href="tel:+46731447043">+46 731 44 70 43</a></p>
+                <p>Gothenburg, Sweden</p>
+            </address>
         </section>
     </footer>
 </body>

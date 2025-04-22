@@ -1,3 +1,6 @@
-document.getElementById('theme-toggle').addEventListener('click', function () {
+/*
+document.getElementById('contact-button').addEventListener('click', function () {
+  window.location
     document.body.classList.toggle('dark-mode');
   });
+*/
